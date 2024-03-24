@@ -1,8 +1,9 @@
 # Bruteforce attack with Pico-Ducky
-This project shows that through [Pico-Ducky](https://github.com/dbisu/pico-ducky) is possible to execute bruteforce attack on android devices. In order to do this, it has been necessary to use [Duckyscript 3.0](https://github.com/dbisu/pico-ducky/pull/125) and this was possible thanks to [Desperationis](https://github.com/Desperationis). 
+This project shows that through [Pico-Ducky](https://github.com/dbisu/pico-ducky) is possible to execute bruteforce attack on android devices. In order to do this, it has been necessary to use [Duckyscript 3.0](https://github.com/dbisu/pico-ducky/pull/125) and this was possible thanks to [Desperationis](https://github.com/Desperationis).
+<br> <br> What is nice about this project in compare with similar is that it doesn't require root, adb, usb debugging and that the necessary hardware costs about 10 € (Pico-Ducky + OTG cable).
 
 # Important information
-Nowadays, bruteforce attacks on android devices are impossible due to the long time of wait between attempts (cooldown). However, certain phones may be vulnerable, especially the old ones. In addition, there are some list of PIN that increse the probability of unlocking since some PIN are more likely to be used than others.
+Nowadays, bruteforce attacks on android devices are impossible due to the long time of wait between attempts (cooldown). However, certain phones may be vulnerable, especially the old ones. In addition, there are some list of PIN that increse the probability of unlocking, since some PIN are more likely to be used than others.
 A list of supported and unsoppurted phones, besides a lot of other useful information, is available on [Android-PIN-Bruteforce](https://github.com/urbanadventurer/Android-PIN-Bruteforce/tree/master).
 
 # Payload
